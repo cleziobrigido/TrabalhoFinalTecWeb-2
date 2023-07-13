@@ -1,0 +1,195 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('font/Pixel.ttf');
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #1e6275;
+    color: #fff;
+    height: 100%;
+}
+.ceu{
+    position: relative;
+    border-top: 5px solid darkslategrey;
+    border-left: 5px solid darkslategrey;
+    border-right: 5px solid darkslategrey;
+    height: 50%;
+    width: 1200px;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+#game-board{
+    position: relative;
+    border: 5px solid darkslategrey;
+    border-top: none;
+    height: 25%;
+    width: 1200px;
+    overflow: hidden;
+    background: linear-gradient(rgb(5, 136, 5),rgb(5, 104, 5));
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 30px;
+}
+.botao{
+    width: 10%;
+    border: 2px solid black ;
+    border-radius: 10px;
+    margin: 3px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(148, 145, 0);
+    background: #dedada;
+}
+
+.mario{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    z-index: 100;
+}
+.inimigo{
+    position: absolute;
+    left: 30%;
+    width: 40px;
+    height: 40px;
+}
+
+.pontuacao{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 30px;
+}
+
+.img-estrela{
+    position: absolute;
+    top: 10px;
+    right: 95%;
+}
+.quant-estrelas{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 90%;
+    font-family: Pixel;
+    font-size: 30px;
+    color: yellow;
+    
+}
+.combust-estrela{
+    position: absolute;
+}
+
+.clouds{
+    position: absolute;
+    width: 400px;
+    animation: moveclouds 20s infinite linear;
+}
+
+/*vai animar a nuvem para que ela se movimente  na div ceu*/
+@keyframes moveclouds{
+    from{
+        right: -400px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+
+/*no comoeço tentamos realizar a movimnetação da estrada por meio dos blocos mas cabou se torando inviável, deu 10 blocos :(*/
+.rua{
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    bottom: 2px;
+    left: calc(20%);
+}
+.rua1{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    bottom: 52px;
+    left: calc(22%);
+}
+.rua2{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 92px;
+    left: calc(24%);
+}
+.rua3{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 122px;
+    left: calc(26%);
+}
+.rua4{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 152px;
+    left: calc(28%);
+}
+.rua5{
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    bottom: 2px;
+    left: calc(70%);
+
+}
+.rua6{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    bottom: 52px;
+    left: calc(68%);
+
+}
+.rua7{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 92px;
+    left: calc(66%);
+
+}
+.rua8{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 122px;
+    left: calc(64%);
+}
+.rua9{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    bottom: 152px;
+    left: calc(62%);
+}
